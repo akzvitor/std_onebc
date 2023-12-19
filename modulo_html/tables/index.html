@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Tabelas no HTML</title>
+    </head>
+
+    <body>
+        <h1>Criação de tabelas no HTML</h1>
+
+        <!--
+            <table></table> indica uma tabela
+            Propriedade de estilização border para adicionar uma borda visível
+
+            tr></tr> indica uma linha da tabela
+
+            <td></td> indica uma coluna da tabela
+
+            <th></th> indica um cabeçalho na tabela
+
+            Propriedades colspan e rowspan para personalizar o tamanho das células da tabela
+
+            <thead></thead> é um comando de organização, usado para especificar as informações do cabeçalho da tabela
+
+            <tbody></tbody> é um comando de organização, usado para especificar as informações do corpo da tabela
+        -->
+
+        <table>
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+            </tr>
+            <tr>
+                <td>Dado 1</td>
+                <td>Dado 2</td>
+            </tr>
+            <tr>
+                <td>Dado 3</td>
+                <td>Dado 4</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Tabelas com Cabeçalho</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>João</td>
+                    <td>30</td>
+                    <td>Engenheiro</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>25</td>
+                    <td>Advogada</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h1>Tabelas com células personalizadas</h1>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">Informações Pessoais</th>
+                    <th>Contato</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><strong>Nome</strong></td>
+                    <td>João</td>
+                    <td rowspan="2">Telefone: 123456</td>
+                </tr>
+                <tr>
+                    <td><strong>Idade</strong></td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td><strong>Nome</strong></td>
+                    <td>Maria</td>
+                    <td rowspan="2">Telefone: 789012</td>
+                </tr>
+                <tr>
+                    <td><strong>Idade</strong></td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
