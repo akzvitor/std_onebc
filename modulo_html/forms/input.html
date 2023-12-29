@@ -5,22 +5,28 @@
     <title>Input - Formulários</title>
 </head>
 
+<!-- Apresentando alguns dos principais campos de input dos formulários HTML -->
+
 <body>
     <h1>Inputs no HTML</h1>
 
     <form>
+        <!-- Campo de texto -->
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome">
         <br><br>
 
+        <!-- Campo de e-mail -->
         <label for="email">E-mail:</label>
         <input type="email" name="email" id="email">
         <br><br>
 
+        <!-- Campo de senha -->
         <label for="senha">Senha:</label>
         <input type="password" name="senha" id="senha">
         <br><br>
 
+        <!-- Campo de seleção única -->
         <label>Gênero:</label>
         <input type="radio" name="genero" id="masculino" value="M">
         <label for="masculino">Masculino</label>
@@ -28,6 +34,7 @@
         <label for="feminino">Feminino</label>
         <br><br>
 
+        <!-- Campo de seleção diversa -->
         <label>Interesses</label>
         <input type="checkbox" name="interesses" id="backend" value="backend">
         <label for="backend">Back-end</label>
@@ -37,14 +44,32 @@
         <label for="backend">Mobile</label>
         <br><br>
 
+        <!-- Campo de data -->
         <label for="data">Data de nascimento:</label>
         <input type="date" name="dataNasc" id="data">
         <br><br>
 
+        <!-- Campo de arquivo -->
         <label for="arquivo">Foto do Perfil:</label>
         <input type="file" name="avatar" id="arquivo">
         <br><br>
-        
+
+        <!-- Campo de caixa de seleção -->
+        <label for="situacao">Situação atual</label>
+        <select name="situacao" id="situacao">
+            <option value="" selected disabled>Selecione uma das opções:</option>
+            <option value="estudante">Estudando para me tornar um programador</option>
+            <option value="estagiario">Atuando como estagiário</option>
+            <option value="junior">Atuando como desenvolvedor júnior</option>
+            <option value="pleno">Atuando como desenvolvedor pleno</option>
+            <option value="senior">Atuando como desenvolvedor sênior</option>
+        </select>
+        <br><br>
+
+        <!-- Campo de texto múltiplo -->
+        <label for="sobre">Sobre mim:</label>
+        <br>
+        <textarea name="sobre" id="aobre" cols="30" rows="10" placeholder="Fale um pouco sobre você!"></textarea>
         <button type="submit">Enviar</button>
     </form>
 </body>
