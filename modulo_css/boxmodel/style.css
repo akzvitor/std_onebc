@@ -1,0 +1,12 @@
+.box {
+    background-color: #f4545e;
+    border: solid 2px #000000;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}

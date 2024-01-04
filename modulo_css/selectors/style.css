@@ -1,0 +1,64 @@
+/* seletor universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #242222;
+    color: #fff;
+    padding: 15px;
+}
+
+/* elemento aninhado */
+nav a {
+    text-decoration: none;
+    color: rgb(213, 57, 57);
+}
+
+/* apenas o primeiro elemento filho */
+nav > a {
+    display: block;
+    padding: 15px;
+}
+
+/* classes */
+.laranja {
+    color: rgb(249, 81, 9);
+}
+
+.verde {
+    color: #0f0;
+}
+
+/* id */
+#secao-principal {
+    padding: 50px;
+    text-align: center;
+}
+
+#secao-principal > * {
+    margin-top: 15px;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* seletor de sequencia */
+input + input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* seletor de propriedade */
+input[name=email] {
+    background-color: rgb(22, 169, 233);
+}
+
+input[name=password] {
+    background-color: #0f0;
+    border-radius: 5px;
+}
