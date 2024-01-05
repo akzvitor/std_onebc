@@ -1,0 +1,29 @@
+:root {
+    --main-color: #0e32e4;
+    --light-color: #b6eeff;
+    --dark-color: #060349;
+    --small-paddg: .25rem 1rem;
+    --medium-paddg: 2rem;
+    --big-paddg: 4rem;
+}
+
+header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: var(--small-paddg);
+}
+
+section {
+    background-color: var(--light-color);
+    padding: var(--medium-paddg);
+}
+
+div {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    padding: var(--small-paddg);
+}
+
+.red-box {
+    --main-color: #f00;
+}
