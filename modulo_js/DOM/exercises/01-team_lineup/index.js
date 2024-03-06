@@ -1,41 +1,40 @@
-function summonPlayer() {
-    const teamLineup = document.getElementById('team-lineup')
-
-    const ul = document.createElement('ul')
-
-    const playerLi = document.createElement('li')
-
-    const playerPositionInput = document.getElementById('position')
-    const playerNameInput = document.getElementById('name')
-    const playerTShirtNumberInput = document.getElementById('tshirt-number')
-
-    const playerPosition = playerPositionInput.value
-    const playerName = playerNameInput.value
-    const playerTShirtNumber = playerTShirtNumberInput.value
+function lineupPlayer() {
+    const position = document.getElementById('position').value
+    const playerName = document.getElementById('player-name').value
+    const shirtNumber = document.getElementById('shirt-number').value
 
     const confirmation = confirm(
-        "Deseja escalar o jogador " + playerName + " na posição de " + playerPosition + "?"
+        "Deseja escalar o jogador " + playerName + " na posição de " + position + "?"
     )
 
     if (confirmation) {
-        playerLi.innerText = playerPosition + " " + playerName + " - Camisa " + playerTShirtNumber
+        const playerLineup = document.getElementById('lineup')
+        const li = document.createElement('li')
 
-        ul.appendChild(playerLi)
+        li.innerText = "(" + shirtNumber + ") " + playerName + " - " + position
+        li.id = shirtNumber
 
-        teamLineup.appendChild(ul)
-
-        playerNameInput.value = ""
-        playerPositionInput.value = ""
-        playerTShirtNumberInput.value = ""
+        playerLineup.appendChild(li)
     }
 
+    document.getElementById('position').value = ""
+    document.getElementById('player-name').value = ""
+    document.getElementById('shirt-number').value = ""
 }
 
 function removePlayer() {
-    const teamLineup = document.getElementById('team-lineup')
+    const removeNumber = document.getElementById('remove-number').value
+    const removePlayer = document.getElementById(removeNumber)
 
-    const removeNumberInput = document.getElementsById('remove-number')
-    const removeNumber = removeNumberInput.value
+    const confirmation = confirm(
+        "Deseja remover o jogador " + removePlayer.innerText + "?"
+    )
 
-    teamLineup.removeChild(removeNumberInput.value === removeNumber)
+    if (confirmation) {
+        const playerLineup = document.getElementById('lineup')
+
+        playerLineup.removeChild(removePlayer)
+    }
+
+    document.getElementById('remove-number').value = ""
 }

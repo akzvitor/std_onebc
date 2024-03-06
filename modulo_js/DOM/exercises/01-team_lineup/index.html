@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escalação de times</title>
+    <title>Escalacão de Time</title>
     <script src="./index.js"></script>
 </head>
+
 <body>
-    <h1>Escalação do time</h1>
-    <hr>
-
-    <h2>Escalar jogador</h2>
-    <label for="position">Posição</label>
-    <input type="text" id="position" name="position">
-
-    <br><br>
-
-    <label for="name">Nome do jogador</label>
-    <input type="text" id="name" name="name">
-
-    <br><br>
-
-    <label for="tshirt-number">Número da camisa</label>
-    <input type="text" id="tshirt-number" name="tshirt-number">
-    <br>
-    <button onclick="summonPlayer()">Escalar</button>
-
-    <h2>Remover jogador</h2>
-    <label for="remove-number">Número da camisa</label>
-    <input type="text" id="remove-number" name="remove-number">
-
-    <br>
-    <button onclick="removePlayer()">Remover jogador</button>
+    <header>
+        <h1>Escalacão do Time</h1>
+    </header>
 
     <hr>
 
-    <h2>Time</h2>
+    <main>
+        <section>
+            <h2>Escalar jogador</h2>
+            <label for="position">Posição</label>
+            <input type="text" name="position" id="position">
 
-    <section id="team-lineup"></section>
+            <br><br>
+
+            <label for="player-name">Nome do jogador</label>
+            <input type="text" name="player-name" id="player-name">
+
+            <br><br>
+
+            <label for="shirt-number">Número da camisa</label>
+            <input type="text" name="shirt-number" id="shirt-number">
+            
+            <br>
+
+            <button onclick="lineupPlayer()">Escalar</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Remover jogador</h2>
+            <label for="remove-number">Número da camisa</label>
+            <input type="text" name="remove-number" id="remove-number">
+
+            <br>
+
+            <button onclick="removePlayer()">Remover</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Time</h2>
+            <ul id="lineup"></ul>
+        </section>
+    </main>
 </body>
+
 </html>
